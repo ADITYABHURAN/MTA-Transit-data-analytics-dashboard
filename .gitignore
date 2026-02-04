@@ -1,0 +1,90 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv/
+
+# IDE settings
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environment variables
+.env
+.env.local
+
+# Logs
+logs/
+*.log
+
+# Data files (keep structure, ignore large files)
+data/raw/*.csv
+data/processed/*.csv
+data/exports/*.csv
+data/synthetic/*.csv
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/exports/.gitkeep
+!data/synthetic/.gitkeep
+
+# Database dumps
+*.sql.gz
+*.dump
+
+# Power BI files
+*.pbix
+*.pbit
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Test coverage
+htmlcov/
+.coverage
+.coverage.*
+.pytest_cache/
+
+# mypy
+.mypy_cache/
+
+# Secrets
+secrets/
+*.pem
+*.key
