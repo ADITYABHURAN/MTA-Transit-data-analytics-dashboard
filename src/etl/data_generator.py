@@ -337,11 +337,10 @@ class SyntheticDataGenerator:
                 num_delays = int(num_delays * 1.3)
             
             for _ in range(num_delays):
-                # Peak hours have more delays
-                hour = np.random.choice(
-                    24,
-                    p=np.array([0.02]*6 + [0.08]*3 + [0.04]*7 + [0.08]*3 + [0.03]*5)
-                )
+                # Peak hours have more delays - probabilities must sum to 1
+                hour_probs = np.array([0.02]*6 + [0.08]*3 + [0.04]*7 + [0.08]*3 + [0.02]*5)
+                hour_probs = hour_probs / hour_probs.sum()  # Normalize to sum to 1
+                hour = np.random.choice(24, p=hour_probs)
                 minute = random.randint(0, 59)
                 
                 line = random.choice(SUBWAY_LINES)
